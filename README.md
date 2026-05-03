@@ -80,9 +80,6 @@ The interface is fully responsive, keyboard-navigable, and built with accessibil
 
 ```
 healthnav/
-├── public/
-│   ├── favicon.ico
-│   └── robots.txt
 ├── src/
 │   ├── components/
 │   │   ├── ui/                  # shadcn/ui primitives (accordion, button, card, …)
