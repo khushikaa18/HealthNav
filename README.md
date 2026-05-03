@@ -137,7 +137,7 @@ healthnav/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/healthnav.git
+git clone https://github.com/khushikaa18/HealthNav.git
 cd healthnav
 
 # Install dependencies
