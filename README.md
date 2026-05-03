@@ -279,12 +279,3 @@ Contributions are welcome. Please:
 
 For larger changes, open an issue first to discuss the approach.
 
----
-
-## License
-
-This project is released under the **MIT License**. See `LICENSE` for details.
-
----
-
-> HealthNav is decision support only. It does not constitute medical advice or a cost guarantee. Always consult a qualified physician before making any treatment decisions.
