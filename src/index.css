@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HealthNav design system. All colors HSL. */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 67% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 67% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 67% 14%;
+
+    /* Navy primary */
+    --primary: 215 67% 14%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 215 56% 18%;
+    --primary-mid: 211 56% 23%;
+
+    /* Teal accent */
+    --accent: 174 100% 27%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 172 100% 38%;
+    --accent-dim: 174 100% 16%;
+
+    --secondary: 210 33% 96%;
+    --secondary-foreground: 215 67% 14%;
+
+    --muted: 210 33% 96%;
+    --muted-foreground: 200 16% 41%;
+
+    --destructive: 0 65% 47%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-bg: 0 86% 95%;
+
+    --warning: 33 100% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-bg: 36 100% 94%;
+
+    --success: 123 46% 34%;
+    --success-foreground: 0 0% 100%;
+    --success-bg: 122 39% 93%;
+
+    --info: 211 80% 42%;
+    --info-foreground: 0 0% 100%;
+    --info-bg: 210 92% 94%;
+
+    --gold: 43 96% 56%;
+    --gold-bg: 47 100% 94%;
+
+    --border: 210 27% 91%;
+    --input: 210 27% 91%;
+    --ring: 174 100% 27%;
+
+    --bg-light: 210 33% 96%;
+    --bg-card: 210 50% 98%;
+
+    --radius: 0.75rem;
+
+    --shadow-sm: 0 1px 3px hsl(215 67% 14% / 0.08), 0 1px 2px hsl(215 67% 14% / 0.04);
+    --shadow-md: 0 4px 16px hsl(215 67% 14% / 0.10), 0 2px 6px hsl(215 67% 14% / 0.06);
+    --shadow-lg: 0 12px 40px hsl(215 67% 14% / 0.15), 0 4px 12px hsl(215 67% 14% / 0.08);
+    --shadow-xl: 0 24px 64px hsl(215 67% 14% / 0.18);
+
+    --sidebar-background: 215 67% 14%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 174 100% 27%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 56% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 215 30% 25%;
+    --sidebar-ring: 174 100% 38%;
+  }
+
+  .dark {
+    /* Single visual identity for now — keep parity with light to avoid two themes */
+    --background: 215 67% 8%;
+    --foreground: 210 40% 98%;
+    --card: 215 67% 10%;
+    --card-foreground: 210 40% 98%;
+    --primary: 174 100% 38%;
+    --primary-foreground: 215 67% 14%;
+    --muted: 215 30% 18%;
+    --muted-foreground: 210 20% 70%;
+    --border: 215 30% 22%;
+    --input: 215 30% 22%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  h1, h2, h3 { font-family: 'DM Serif Display', Georgia, serif; letter-spacing: -0.02em; }
+  :focus-visible { outline: 2px solid hsl(var(--accent)); outline-offset: 2px; border-radius: 4px; }
+}
+
+@layer utilities {
+  .text-gold { color: hsl(var(--gold)); }
+  .bg-gold { background-color: hsl(var(--gold)); }
+  .bg-warning-bg { background-color: hsl(var(--warning-bg)); }
+  .bg-success-bg { background-color: hsl(var(--success-bg)); }
+  .bg-info-bg { background-color: hsl(var(--info-bg)); }
+  .bg-destructive-bg { background-color: hsl(var(--destructive-bg)); }
+  .text-warning { color: hsl(var(--warning)); }
+  .text-success { color: hsl(var(--success)); }
+  .text-info { color: hsl(var(--info)); }
+  .text-accent-light { color: hsl(var(--accent-light)); }
+  .bg-accent-light { background-color: hsl(var(--accent-light)); }
+  .shadow-soft { box-shadow: var(--shadow-sm); }
+  .shadow-elevated { box-shadow: var(--shadow-md); }
+  .shadow-floating { box-shadow: var(--shadow-lg); }
+  .shadow-dramatic { box-shadow: var(--shadow-xl); }
+  .gradient-hero {
+    background:
+      radial-gradient(ellipse at top right, hsl(var(--accent) / 0.15), transparent 60%),
+      radial-gradient(ellipse at bottom left, hsl(var(--accent) / 0.06), transparent 60%),
+      hsl(var(--primary));
+  }
+}
