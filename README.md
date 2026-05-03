@@ -134,8 +134,8 @@ healthnav/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/healthnav.git
-cd healthnav
+git clone https://github.com/khushikaa18/HealthNav.git
+cd HealthNav
 
 # Install dependencies
 npm install
